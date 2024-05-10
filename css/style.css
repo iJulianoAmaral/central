@@ -4,8 +4,11 @@
     --secondary: #0B2154;
     --light: #F2F2F2;
     --dark: #111111;
-}
 
+}
+* {
+    box-sizing: border-box;
+}
 .fw-medium {
     font-weight: 600 !important;
 }
@@ -38,7 +41,7 @@
 .btn {
     font-weight: 500;
     text-transform: uppercase;
-    transition: .5s;
+    transition: .2s ease-in-out;
 }
 
 .btn.btn-primary,
@@ -153,29 +156,23 @@
     z-index: 1;
 }
 
-.carousel-control-prev,
-.carousel-control-next {
-    width: 10%;
-}
 
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-    width: 3rem;
-    height: 3rem;
-}
 
-@media (max-width: 768px) {
+@media (max-width: 480px) {
     #header-carousel .carousel-item {
         position: relative;
-        min-height: 450px;
+    
     }
     
     #header-carousel .carousel-item img {
         position: absolute;
-        width: 100%;
-        height: 100%;
+        width: 350px;
         object-fit: cover;
     }
+    .b-w span {
+        font-size: 1rem;
+    }
+
 }
 
 .page-header {
@@ -381,4 +378,81 @@
     margin-right: 0;
     padding-right: 0;
     border-right: none;
+}
+
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+.b-t-o {
+    position: fixed;
+    bottom: 2rem;
+    right: 1rem;
+    display: inline-flex;
+    align-items:  center;
+    justify-content: center;
+    background-color: #dc143c;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    text-decoration: none;
+    transition: 0.2s ease-out;
+}
+
+
+.b-t-o {
+    color: #FFFFFF;
+    font-size: 3rem;
+    transition: 0.2s ease-out;
+}
+
+.b-t-o:hover {
+    background-color: #be1a3b;
+}
+
+.b-t-o:hover span {
+    transform: translateY(-3px);
+    color: #FFFFFF;
+}
+
+.b:hover {
+    
+    color: #ffe ;
+
+}
+
+/* whats button */
+
+
+
+.b-w {
+    position: fixed;
+    bottom: 2rem;
+    left: 0.6rem;
+    display: inline-flex;
+    align-items:  center;
+    justify-content: center;
+    background-color: #14dc50;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    text-decoration: none;
+    transition: 0.2s ;
+}
+
+
+.b-w span {
+    color: #FFFFFF;
+    font-size: 2rem;
+    transition: 0.2s ;
+}
+
+.b-w:hover  {
+    background-color: #14dc48;
+
+}
+
+.b-w:hover span {
+    transform: translateY(-3px);
+    color: #FFFFFF;
 }
